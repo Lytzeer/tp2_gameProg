@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 305791941}
+  jumper: {fileID: 305791936}
   jumpForce: 10
   onFloor: 0
 --- !u!61 &305791944
@@ -421,6 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 8332859579975982465, guid: 71c5d547b9246d643bd44d1a709e3f6c, type: 3}
+  canCreate: 1
   pieces: []
   piecesToRemove: []
 --- !u!4 &426279849
