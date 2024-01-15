@@ -6,7 +6,7 @@ public class CreateObstacle : MonoBehaviour
 {
     public GameObject obstacle;
     public bool canCreate = true;
-    public float YPosition= -4.05f;
+    public float YPosition= -4.08f;
     public int score = 0;
     public List<GameObject> obstacles = new List<GameObject>();
     public List<GameObject> obstaclesToRemove = new List<GameObject>();
@@ -40,11 +40,27 @@ public class CreateObstacle : MonoBehaviour
     {
         while (canCreate)
         {
-            yield return new WaitForSeconds(1f);
-            GameObject newObstacle = Instantiate(obstacle);
-            newObstacle.transform.position = new Vector2(10f, YPosition); 
-            newObstacle.GetComponent<Rigidbody2D>().velocity = new Vector2(-5f, 0f);
-            obstacles.Add(newObstacle);
+            float randomTime = Random.Range(1.5f, 2.5f);
+            yield return new WaitForSeconds(randomTime);
+
+            int randomNumber = Random.Range(1, 4);
+            int randomNumberCheck = Random.Range(1, 4);
+            if (randomNumber==randomNumberCheck)
+            {
+                for (int i = 0; i < randomNumber; i++)
+                {
+                    yield return new WaitForSeconds(0.25f);
+                    GameObject newObstacle = Instantiate(obstacle);
+                    newObstacle.transform.position = new Vector2(10f, YPosition);
+                    newObstacle.GetComponent<Rigidbody2D>().velocity = new Vector2(-5f, 0f);
+                    obstacles.Add(newObstacle);
+                }
+            }else{
+                GameObject newObstacle = Instantiate(obstacle);
+                newObstacle.transform.position = new Vector2(10f, YPosition);
+                newObstacle.GetComponent<Rigidbody2D>().velocity = new Vector2(-5f, 0f);
+                obstacles.Add(newObstacle);
+            }
         }
     }
 }

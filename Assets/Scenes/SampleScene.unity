@@ -171,6 +171,7 @@ MonoBehaviour:
   canCreate: 1
   YPosition: -4.05
   score: 0
+  jumper: {fileID: 305791942}
   obstacles: []
   obstaclesToRemove: []
 --- !u!1 &305791936
@@ -278,7 +279,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
