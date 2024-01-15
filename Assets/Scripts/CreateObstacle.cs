@@ -26,6 +26,8 @@ public class CreateObstacle : MonoBehaviour
             {
                 obstaclesToRemove.Add(obstacle);
                 Destroy(obstacle);
+            }else{
+                obstacle.transform.Rotate(0f, 0f, 1f);
             }
         }
         foreach (GameObject obstacle in obstaclesToRemove)
@@ -42,6 +44,8 @@ public class CreateObstacle : MonoBehaviour
             GameObject newObstacle = Instantiate(obstacle);
             newObstacle.transform.position = new Vector2(10f, YPosition); 
             newObstacle.GetComponent<Rigidbody2D>().velocity = new Vector2(-5f, 0f);
+
+            newObstacle.transform.Rotate(0f, 0f, Random.Range(0f, 360f));
             obstacles.Add(newObstacle);
         }
     }
