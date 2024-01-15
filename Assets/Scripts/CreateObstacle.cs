@@ -7,6 +7,7 @@ public class CreateObstacle : MonoBehaviour
     public GameObject obstacle;
     public bool canCreate = true;
     public float YPosition= -4.05f;
+    public int score = 0;
     public List<GameObject> obstacles = new List<GameObject>();
     public List<GameObject> obstaclesToRemove = new List<GameObject>();
     // Start is called before the first frame update
@@ -26,8 +27,7 @@ public class CreateObstacle : MonoBehaviour
             {
                 obstaclesToRemove.Add(obstacle);
                 Destroy(obstacle);
-            }else{
-                obstacle.transform.Rotate(0f, 0f, 1f);
+                score++;
             }
         }
         foreach (GameObject obstacle in obstaclesToRemove)
@@ -44,8 +44,6 @@ public class CreateObstacle : MonoBehaviour
             GameObject newObstacle = Instantiate(obstacle);
             newObstacle.transform.position = new Vector2(10f, YPosition); 
             newObstacle.GetComponent<Rigidbody2D>().velocity = new Vector2(-5f, 0f);
-
-            newObstacle.transform.Rotate(0f, 0f, Random.Range(0f, 360f));
             obstacles.Add(newObstacle);
         }
     }

@@ -170,6 +170,7 @@ MonoBehaviour:
   obstacle: {fileID: 8032300047447734441, guid: 777be4cb0e847b044ac742ad6786447e, type: 3}
   canCreate: 1
   YPosition: -4.05
+  score: 0
   obstacles: []
   obstaclesToRemove: []
 --- !u!1 &305791936

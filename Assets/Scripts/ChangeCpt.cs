@@ -16,6 +16,6 @@ public class ChangeCpt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        compteur.text = createObstacle.obstaclesToRemove.Count.ToString();
+        compteur.text = createObstacle.score.ToString();
     }
 }
