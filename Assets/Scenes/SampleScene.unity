@@ -171,7 +171,6 @@ MonoBehaviour:
   canCreate: 1
   YPosition: -4.05
   score: 0
-  jumper: {fileID: 305791942}
   obstacles: []
   obstaclesToRemove: []
 --- !u!1 &305791936
@@ -190,6 +189,7 @@ GameObject:
   - component: {fileID: 305791945}
   - component: {fileID: 305791946}
   - component: {fileID: 305791947}
+  - component: {fileID: 305791948}
   m_Layer: 0
   m_Name: Jumper
   m_TagString: Jumper
@@ -377,6 +377,67 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &305791948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305791936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a1e3cd8c257054ab41ba6c65d7f216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle: {fileID: 99280255}
+  piece: {fileID: 426279848}
+--- !u!1 &426279847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 426279849}
+  - component: {fileID: 426279848}
+  m_Layer: 0
+  m_Name: PieceController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &426279848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426279847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a5c1525fe8c3c469c7b8ee43307a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piece: {fileID: 8332859579975982465, guid: 71c5d547b9246d643bd44d1a709e3f6c, type: 3}
+  pieces: []
+  piecesToRemove: []
+--- !u!4 &426279849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426279847}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.528127, y: -6.359473, z: 0.05270199}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &433435292
 GameObject:
   m_ObjectHideFlags: 0
