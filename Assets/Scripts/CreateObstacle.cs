@@ -6,7 +6,7 @@ public class CreateObstacle : MonoBehaviour
 {
     public GameObject obstacle;
     public bool canCreate = true;
-    public float YPosition= -4.08f;
+    public float YPosition= -4.1f;
     public int score = 0;
     public List<GameObject> obstacles = new List<GameObject>();
     public List<GameObject> obstaclesToRemove = new List<GameObject>();
@@ -58,7 +58,7 @@ public class CreateObstacle : MonoBehaviour
             }else{
                 GameObject newObstacle = Instantiate(obstacle);
                 newObstacle.transform.position = new Vector2(10f, YPosition);
-                newObstacle.GetComponent<Rigidbody2D>().velocity = new Vector2(-5f, 0f);
+                newObstacle.GetComponent<Rigidbody2D>().velocity = new Vector2(-6f, 0f);
                 obstacles.Add(newObstacle);
             }
         }
