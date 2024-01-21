@@ -43,8 +43,8 @@ public class CreateObstacle : MonoBehaviour
             float randomTime = Random.Range(1.5f, 2.5f);
             yield return new WaitForSeconds(randomTime);
 
-            int randomNumber = Random.Range(1, 4);
-            int randomNumberCheck = Random.Range(1, 4);
+            int randomNumber = Random.Range(1, 3);
+            int randomNumberCheck = Random.Range(1, 3);
             if (randomNumber==randomNumberCheck)
             {
                 for (int i = 0; i < randomNumber; i++)
@@ -56,9 +56,11 @@ public class CreateObstacle : MonoBehaviour
                     obstacles.Add(newObstacle);
                 }
             }else{
+                float scale = Random.Range(0.5f, 1.5f);
                 GameObject newObstacle = Instantiate(obstacle);
                 newObstacle.transform.position = new Vector2(10f, YPosition);
                 newObstacle.GetComponent<Rigidbody2D>().velocity = new Vector2(-6f, 0f);
+                newObstacle.transform.localScale = new Vector2(scale, scale);
                 obstacles.Add(newObstacle);
             }
         }

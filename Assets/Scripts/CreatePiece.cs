@@ -35,27 +35,13 @@ public class CreatePiece : MonoBehaviour
 
     IEnumerator SpawnPiece()
     {
-        // yield return new WaitForSeconds(0.25f);
-        // int randomNumber = Random.Range(1, 3);
-        // int randomNumberCheck = Random.Range(1, 3);
-        // int randomNumber =1;
-        // int randomNumberCheck = 1;
-        // if (randomNumber==randomNumberCheck)
-        // {
-        //     yield return new WaitForSeconds(0.25f);
-        //     GameObject newPiece = Instantiate(piece);
-        //     newPiece.transform.position = new Vector2(10f, -4.08f);
-        //     newPiece.GetComponent<Rigidbody2D>().velocity = new Vector2(-5f, 0f);
-        //     pieces.Add(newPiece);
-        // }
         while (canCreate)
         {
             yield return new WaitForSeconds(0.25f);
             int randomNumber = Random.Range(1, 15);
-            int randomNumberCheck = Random.Range(1, 5);
+            int randomNumberCheck = Random.Range(1, 7);
             if (randomNumber==randomNumberCheck)
             {
-                // yield return new WaitForSeconds(0.25f);
                 GameObject newPiece = Instantiate(piece);
                 newPiece.transform.position = new Vector2(10f, -4.08f);
                 newPiece.GetComponent<Rigidbody2D>().velocity = new Vector2(-5f, 0f);
