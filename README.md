@@ -16,6 +16,8 @@ Le jeu est fortement inspiré de [Geometry Dash](https://store.steampowered.com/
 - Menu de pause
 - Écran de fin de partie
 - Rammassage de pièces
+- Vitesse des obstacles qui augmente tous les 10 points de score
+- Taille aléatoire des objets
 
 ## Crédits
 
