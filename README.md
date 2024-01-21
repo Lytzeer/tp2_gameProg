@@ -8,7 +8,6 @@ Le jeu est fortement inspiré de [Geometry Dash](https://store.steampowered.com/
 - 3 Scenes
   - Menu
   - Game
-  - Changement de Skin
 - Skins
 - 1 Évenement aléatoire
 - Gestions des scores
