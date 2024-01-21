@@ -12,7 +12,7 @@ public class FloorCollider : MonoBehaviour
             jump.onFloor = true;
 
             Vector2 newPosition = transform.position;
-            newPosition.y = collision.gameObject.transform.position.y + 0.001f;
+            newPosition.y = -4.2f;
             transform.position = newPosition;
         }
     }
